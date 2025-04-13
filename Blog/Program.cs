@@ -3,6 +3,7 @@ using Blog.api.Application.Services.Implementations;
 using Blog.api.Application.Services.Interfaces;
 using Blog.api.Domain.Interfaces.Articles;
 using Blog.api.Infrastructure.Repositories.Articles;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +37,16 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference(options =>
+    {
+        options
+        .WithTheme(ScalarTheme.Mars)
+        .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.RestSharp);
+
+        //.WithTitle("alipour")
+        //.WithApiKeyAuthentication(keyOptions => keyOptions.Token = "apiToken");
+        //.WithPreferredScheme("ApiKey");
+    });
 }
 
 app.UseHttpsRedirection();
