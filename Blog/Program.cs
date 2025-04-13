@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using Blog.api.Application.Services.Implementations;
 using Blog.api.Application.Services.Interfaces;
 using Blog.api.Domain.Interfaces.Articles;
@@ -7,6 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
+builder.Services.AddApiVersioning(options =>
+{
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.DefaultApiVersion = new ApiVersion(1,0);
+    options.ReportApiVersions = true;
+});
 
 #region Dependency injection
 

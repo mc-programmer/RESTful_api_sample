@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Blog.api.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
 public class ArticleController(IArticleService articleService) : ControllerBase
 {
     [HttpGet]
