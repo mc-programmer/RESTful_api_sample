@@ -1,6 +1,6 @@
 # RESTful_api_sample
 
-## this is a simple blog api project
+## this is a simple asp.net core blog api project
 
 i've tried implement REST principles in this project
 
