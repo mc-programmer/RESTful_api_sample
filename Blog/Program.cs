@@ -40,9 +40,9 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference(options =>
     {
         options
-        .WithTheme(ScalarTheme.Mars)
         .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.RestSharp);
 
+        //.WithTheme(ScalarTheme.Purple)
         //.WithTitle("alipour")
         //.WithApiKeyAuthentication(keyOptions => keyOptions.Token = "apiToken");
         //.WithPreferredScheme("ApiKey");
