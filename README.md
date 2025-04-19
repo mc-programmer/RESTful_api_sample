@@ -2,11 +2,8 @@
 
 ## this is a simple asp.net core blog api project
 
-i've tried implement REST principles in this project
+About
+this is my learning project with some samples, I've exercised some of the exciting features of .NET like unit testing, web api, versioning, moq, and etc...
 
 ## Collaborate !
-I invite you to develop this project with me, and it will be very enjoyable and interesting for me.
-
-I've created an inmemmory repository for that so if you dont have any relational database, dont worry...
-
-just run and test it :)
+lets learn together, i invite you to join me and have progress ;)
