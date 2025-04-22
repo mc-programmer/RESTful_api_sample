@@ -29,20 +29,20 @@ public class ProductControllerTest
         Assert.IsAssignableFrom<IEnumerable<Product>>(viewResult?.ViewData.Model ?? null);
     }
 
-    [Theory]
-    [InlineData(1 , 0)]
-    public void Details_test(int id , int inValidId)
-    {
-        // arrange
-        var moqData = new MoqData();
+    //[Theory]
+    //[InlineData(1 , 0)]
+    //public void Details_test(int id , int inValidId)
+    //{
+    //    // arrange
+    //    var moqData = new MoqData();
 
-        var moq = new Mock<IProductRepository>();
+    //    var moq = new Mock<IProductRepository>();
 
-        moq.Setup(x => x.GetById(id)).Returns();
+    //    moq.Setup(x => x.GetById(id)).Returns();
 
-        ProductController productController = new(moq.Object);
+    //    ProductController productController = new(moq.Object);
 
-        //act
+    //    //act
         
-    }
+    //}
 }
